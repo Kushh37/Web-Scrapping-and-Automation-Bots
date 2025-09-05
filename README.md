@@ -17,10 +17,10 @@ This project focuses on extracting realtor information in Canada using JavaScrip
 
 ## 📂 Files in Repository
 
-[*scrapping.js*](https://github.com/Kushh37/Web-Scrapping-and-Automation-Bots/blob/main/scrapping.js)
+- [*scrapping.js*](https://github.com/Kushh37/Web-Scrapping-and-Automation-Bots/blob/main/scrapping.js)
  – Puppeteer script for scraping realtor data.
 
-[*output.xlsx*](https://github.com/Kushh37/Web-Scrapping-and-Automation-Bots/blob/main/output.xlsx)
+- [*output.xlsx*](https://github.com/Kushh37/Web-Scrapping-and-Automation-Bots/blob/main/output.xlsx)
  – Sample output dataset.
 
 ## 📊 Output

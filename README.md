@@ -4,21 +4,16 @@ This project focuses on extracting realtor information in Canada using JavaScrip
 
 ## 🚀 Overview
 
-Built with JavaScript using the Puppeteer library.
-
-Scrapes realtor information from private sources.
-
-Exports results into a clean .xlsx dataset for business use.
-
-Dataset contains 80,000+ realtor records across Canada.
+- Built with JavaScript using the Puppeteer library.
+- Scrapes realtor information from private sources.
+- Exports results into a clean .xlsx dataset for business use.
+- Dataset contains 80,000+ realtor records across Canada.
 
 ## 🛠️ Tech Stack
 
- - JavaScript – for automation and scraping.
-
- - Puppeteer – browser automation tool.
-
- - Excel (.xlsx) – for structured dataset output.
+- JavaScript – for automation and scraping.
+- Puppeteer – browser automation tool.
+- Excel (.xlsx) – for structured dataset output.
 
 ## 📂 Files in Repository
 

@@ -28,19 +28,19 @@ const readCsvFile = async (filePath) => {
   const wsName = "Data";
   const wsData = [["Owner Name", "Last Sale", "Sale Date", "GeoWarehouse Address"]];
 
-  await page.goto('https://iam.itsorealestate.ca/idp/login');
-  await page.type('#clareity', 'kwkw1367');
-  await page.type('#security', 'tysonandzeus');
+  await page.goto('URL');
+  await page.type('#username', 'username');
+  await page.type('#Password', 'password');
   await page.click('#loginbtn');
   await page.waitForNavigation({waitUntil: 'networkidle0'});
-  await page.goto('https://matrix.itsorealestate.ca/Matrix/Default.aspx');
+  await page.goto('URL2');
   await page.waitForSelector('#ctl02_m_pnlTopMenu > div.TopMenuInner > table > tbody > tr > td.TopMenuLeft > a > img');
 
   for (const address of addresses) {
     console.log(address);
     const page = await browser.newPage();
 
-    await page.goto('https://matrix.itsorealestate.ca/Matrix/special/thirdpartyformpost.aspx?n=GeoWarehouse');
+    await page.goto('Custom URL');
     await page.waitForSelector('#searchTextBox');
     
     await page.type('#searchTextBox', address+' Kitchener');
@@ -57,7 +57,7 @@ const readCsvFile = async (filePath) => {
   
     const htmlContent = await page.content();
 
-    //Dont remove this htmlcontent log
+    //Dont remove this html content log
     console.log(htmlContent);
     const data = await page.evaluate(() => {
       const headers = Array.from(document.querySelectorAll('.header, .header2'));
@@ -92,8 +92,6 @@ const readCsvFile = async (filePath) => {
           }
         }
       });
-  
-      
       return { ownerName, lastSale, saleDate, geoWarehouseAddress };
     });
     console.log(`Owner Name: ${data.ownerName}\nLast Sale: ${data.lastSale}\nSale Date: ${data.saleDate}\nGeoWarehouse Address: ${data.geoWarehouseAddress}\n`);
